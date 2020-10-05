@@ -32,6 +32,10 @@ body, h1, h2, h3, h4 {
   font-family: 'Netflix Sans', sans-serif;
 }
 
+h1, h2, h3, h4, h5, h6, strong {
+  font-weight: 800;	
+}
+
 /*Narrow margins, theme main page*/
 .cardBox-bottompadded {
     margin-bottom: 0.6em !important;
