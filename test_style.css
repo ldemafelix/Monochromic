@@ -1,42 +1,6 @@
-@font-face{
-  font-family:'Netflix Sans';
-  font-weight:100;
-  src:url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Th.woff2) format('woff2'),url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Th.woff) format('woff')
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap'); body, h1, h2, h3, h4 {
+  font-family: 'Quicksand', sans-serif;
 }
-@font-face{
-  font-family:'Netflix Sans';
-  font-weight:300;
-  src:url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Lt.woff2) format('woff2'),url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Lt.woff) format('woff')
-}
-@font-face{
-  font-family:'Netflix Sans';
-  font-weight:400;
-  src:url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Rg.woff2) format('woff2'),url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Rg.woff) format('woff')
-}
-@font-face{
-  font-family:'Netflix Sans';
-  font-weight:700;
-  src:url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Md.woff2) format('woff2'),url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Md.woff) format('woff')
-}
-@font-face{
-  font-family:'Netflix Sans';
-  font-weight:800;
-  src:url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Bd.woff2) format('woff2'),url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Bd.woff) format('woff')
-}
-@font-face{
-  font-family:'Netflix Sans';
-  font-weight:900;
-  src:url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Blk.woff2) format('woff2'),url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Blk.woff) format('woff')
-}
-body, h1, h2, h3, h4 {
-  font-family: 'Netflix Sans', sans-serif;
-}
-
-h1, h2, h3, h4, h5, h6, strong {
-  font-weight: 800;	
-}
-
-:root {--rounding: 5px;}
 
 /*Narrow margins, theme main page*/
 .cardBox-bottompadded {
@@ -126,7 +90,7 @@ h1, h2, h3, h4, h5, h6, strong {
   background-color: #0000 !important; box-shadow: none !important;
 }
 
-/*Correct image aspect ratio behaviour, set border-radius to zero for square tiles*/
+/*Correct image aspect ratio behaviour, set border-radius to zero for square tiles, still part of cast theming*/
 
 @media all and (min-width: 131.25em){
   #castContent .cardScalable {
@@ -184,13 +148,13 @@ h1, h2, h3, h4, h5, h6, strong {
 }
 
 /*Tweak series/movie/album title screen*/
-.mainDetailButtons {
-	font-size: 120%;
-}
 @media all and (max-width: 100em){
   .mainDetailButtons {
 	  font-size: 155%;
 	}
+}
+.mainDetailButtons {
+	font-size: 120%;
 }
 
 .detailSectionContent {
@@ -274,7 +238,7 @@ h1, h2, h3, h4, h5, h6, strong {
   .secondary.listItem-overview.listItemBodyText {height: 2.5em; margin: 0;}
 }
 
-/*Banner transparency*/
+/*Achieves similar effect without use of mask-image, foregoing the cool fade effect*/
 #dashboardPage,
 #dashboardGeneralPage,
 #userProfilesPage,
@@ -288,8 +252,8 @@ h1, h2, h3, h4, h5, h6, strong {
 #notificationSettingsPage,
 #scheduledTasksPage,
 #itemDetailPage {
-  mask-image: linear-gradient(180deg, rgba(0,0,0,0) 0px, rgba(0, 0, 0, 0) 60px, rgb(0, 0, 0) 90px);
-  -webkit-mask-image: linear-gradient(180deg, rgba(0,0,0,0) 0px, rgba(0, 0, 0, 0) 60px, rgb(0, 0, 0) 90px);
+  margin-top: 60px;
+  padding-top: 0px !important;
   overflow: scroll;
 }
 
@@ -298,16 +262,16 @@ h1, h2, h3, h4, h5, h6, strong {
   #moviesPage,
   #tvRecommendedPage,
   #musicRecommendedPage {
-    mask-image: linear-gradient(180deg, rgba(0,0,0,0) 0px, rgba(0, 0, 0, 0) 70px, rgb(0, 0, 0) 120px);
-    -webkit-mask-image: linear-gradient(180deg, rgba(0,0,0,0) 0px, rgba(0, 0, 0, 0) 70px, rgb(0, 0, 0) 120px);
+    margin-top: 70px;
+    padding-top: 0px !important;
     overflow: scroll;
   }
   #encodingSettingsPage,
   #mediaLibraryPage,
   #dlnaSettingsPage,
   #pluginsPage {
-    mask-image: linear-gradient(180deg, rgba(0,0,0,0) 0px, rgba(0, 0, 0, 0) 60px, rgb(0, 0, 0) 90px);
-    -webkit-mask-image: linear-gradient(180deg, rgba(0,0,0,0) 0px, rgba(0, 0, 0, 0) 60px, rgb(0, 0, 0) 90px);
+    margin-top: 60px;
+    padding-top: 0px !important;
     overflow: scroll;
   }
 }
@@ -321,26 +285,9 @@ h1, h2, h3, h4, h5, h6, strong {
   #dlnaSettingsPage,
   #pluginsPage,
   #musicRecommendedPage {
-    mask-image: linear-gradient(180deg, rgba(0,0,0,0) 0px, rgba(0, 0, 0, 0) 100px, rgb(0, 0, 0) 130px);
-    -webkit-mask-image: linear-gradient(180deg, rgba(0,0,0,0) 0px, rgba(0, 0, 0, 0) 100px, rgb(0, 0, 0) 135px);
+    margin-top: 130px;
+    padding-top: 0px !important;
     overflow: scroll;
-    margin-top: 30px;
-  }
-}
-
-@media all and (max-width: 100em){
-  #indexPage,
-	#moviesPage,
-	#tvRecommendedPage,
-	#encodingSettingsPage,
-	#mediaLibraryPage,
-	#dlnaSettingsPage,
-	#pluginsPage,
-	#musicRecommendedPage {
-    mask-image: linear-gradient(180deg, rgba(0,0,0,0) 0px, rgba(0, 0, 0, 0) 100px, rgb(0, 0, 0) 130px);
-    -webkit-mask-image: linear-gradient(180deg, rgba(0,0,0,0) 0px, rgba(0, 0, 0, 0) 100px, rgb(0, 0, 0) 130px);
-    overflow: scroll;
-    margin-top: 20px;
   }
 }
 
@@ -367,7 +314,6 @@ h1, h2, h3, h4, h5, h6, strong {
   max-width: 22em;
 }
 
-/*Hide "please login" text, margin is to prevent login form moving too far up*/
 #loginPage h1 {
   display: none
 }
@@ -375,12 +321,10 @@ h1, h2, h3, h4, h5, h6, strong {
   margin-top: 50px
 }
 
-/*Hide "manual" and "forgot" buttons}*/
 #loginPage .raised.cancel.block.btnForgotPassword.emby-button {
   display: none
 }
 
-/*Login background*/
 #loginPage {
   background: url(https://i.imgur.com/9vL4iNf.png) !important; 
   background-size: cover !important;
@@ -398,6 +342,8 @@ h1, h2, h3, h4, h5, h6, strong {
 }
 
 /*Rounded corners on pretty much everything*/
+:root {--rounding: 5px;}
+
 .formDialogHeader {
   border-top-left-radius: var(--rounding);
   border-top-right-radius: var(--rounding);
@@ -432,6 +378,7 @@ h1, h2, h3, h4, h5, h6, strong {
 .paper-icon-button-light,
 .innerCardFooter,
 .blurhash-canvas,
+.actionSheetMenuItem:hover,
 .dialog,
 .countIndicator,
 .playedIndicator,
@@ -527,7 +474,9 @@ div[data-role="controlgroup"] a[data-role="button"]:last-child {
   right: 0.3em; 
   top: 0.3em;
 }
-
+.paper-icon-button-light:hover {
+  background-color: rgba(0,0,0,0);
+}
 @media all and (min-width: 70em){
   .cardOverlayFab-primary {
     background-color: #00000000;
@@ -547,11 +496,7 @@ div[data-role="controlgroup"] a[data-role="button"]:last-child {
     padding: 0.3em;
   }
 }
-
-/*Hover background for buttons*/
-.button-flat:hover {
-	background: rgba(0,0,0,0.4);
-}
+.button-flat:hover {background: rgba(0,0,0,0.4);}
 .button-flat {
   padding: .5em !important;
   margin: .2em !important;
@@ -590,7 +535,7 @@ progress::-webkit-progress-bar {
 }
 progress::-moz-progress-bar {
   background-color: rgba(255,255,255,0.75);
-  border-radius: var(--rounding);
+  border-radius: 5px;
 }
 progress::-webkit-progress-value {
   background-color: rgba(255,255,255,0.75);
@@ -749,7 +694,7 @@ a[data-role="button"] {
   border: 0.01em solid rgba(255, 255, 255, 0.22) !important;
 }
 
-/*Colors for loading spinner, placeholders, scroll bars*/
+/*Colors for loading spinner and other stuff*/
 .mdl-spinner__layer-1 {border-color: rgba(255, 255, 255, 1);}
 .mdl-spinner__layer-2 {border-color: rgba(128, 128, 128, 1);}
 .mdl-spinner__layer-3 {border-color: rgba(40, 40, 40, 1);}

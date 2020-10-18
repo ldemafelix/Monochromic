@@ -64,10 +64,17 @@ Don't like my transparent view progress overlay? Use this to go back to the old 
 
 ### Define your own accent color
 
-**UPDATED**: This now uses a single RGB value in a variable. This lets me use the color at various transparencies and hence apply the accent more flexibly in places. Use any RGB color picker to find the value for any given color and enter it. **This import line should always be last**.
+**UPDATED**: This now uses a single RGB value in a variable. This lets me use the color at various transparencies and hence apply the accent more flexibly in places. Use any RGB color picker to find the value for any given color and enter it. **This import line and variable should always be last**.
 ```css
 @import url('https://ldemafelix.github.io/Monochromic/customcolor-advanced_style.css');
 :root {--accent: R, G, B;}
+```
+
+### Modify rounding
+
+By adding this variable at the bottom, after the import lines, the rounding can be removed, reduced or increased. **Variables should always be last**.
+```css
+:root {--rounding: 5px;}
 ```
 
 ## Screenshots
